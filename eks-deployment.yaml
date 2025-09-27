@@ -16,10 +16,10 @@ spec:
     spec:
       containers:
       - name: my-nginx
-        image: calc:latest
-        imagePullPolicy: IfNotPresent   # 👈 prevents Kubernetes from trying to pull
+        image: nginx:latest   # ✅ official nginx image
+        imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 5000
+        - containerPort: 80   # ✅ nginx default port
 ---
 apiVersion: v1
 kind: Service
@@ -31,6 +31,6 @@ spec:
   type: LoadBalancer
   ports:
   - protocol: TCP
-    port: 5000
-    targetPort: 5000
-    nodePort: 30080   # You can change or remove this if you want Kubernetes to auto-assign
+    port: 80        # ✅ service port
+    targetPort: 80  # ✅ container port
+    nodePort: 30080 # optional for NodePort/LoadBalancer
