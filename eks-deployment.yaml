@@ -28,7 +28,7 @@ metadata:
 spec:
   selector:
     app: my-nginx
-  type: NodePort
+  type: LoadBalancer
   ports:
   - protocol: TCP
     port: 5000
