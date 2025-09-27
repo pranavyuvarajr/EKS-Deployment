@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌟 Anime Showcase 🌟</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+    /* Base Reset */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(to right, #f9d423, #ff4e50);
+        color: #fff;
+        min-height: 100vh;
+    }
+    h1 {
+        font-family: 'Press Start 2P', cursive;
+        text-align:center;
+        font-size:3rem;
+        margin:2rem 0;
+        text-shadow: 2px 2px 10px #000;
+    }
+
+    /* Container & Grid */
+    .container {
+        width: 95%;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    /* Anime Card */
+    .anime-card {
+        background: rgba(0,0,0,0.6);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+    }
+    .anime-card:hover {
+        transform: translateY(-10px) scale(1.05);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.7);
+    }
+    .anime-card img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        display: block;
+    }
+    .anime-card .content {
+        padding: 1rem;
+    }
+    .anime-card h2 {
+        font-family: 'Press Start 2P', cursive;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: #ffcc00;
+        text-shadow: 1px 1px 4px #000;
+    }
+    .anime-card p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+    .btn {
+        display: inline-block;
+        margin-top: 0.8rem;
+        padding: 0.5rem 1rem;
+        background: #ff4e50;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+    .btn:hover {
+        background: #ff6f91;
+        transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 2rem;
+        background: rgba(0,0,0,0.5);
+        border-top: 2px solid #ffcc00;
+    }
+
+    /* Floating Sparkles */
+    .sparkle {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background: #fff;
+        border-radius: 50%;
+        opacity: 0.8;
+        animation: twinkle 2s infinite;
+    }
+    @keyframes twinkle {
+        0%,100% { opacity: 0.8; transform: translateY(0); }
+        50% { opacity: 0; transform: translateY(-20px); }
+    }
+</style>
+</head>
+<body>
+
+<h1>🌸 Ultimate Anime Showcase 🌸</h1>
+<div class="container">
+    <div class="grid">
+
+        <!-- Example Anime Cards -->
+        <div class="anime-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/6/65/One_Piece_Logo.png" alt="One Piece">
+            <div class="content">
+                <h2>One Piece</h2>
+                <p>Follow Monkey D. Luffy and his crew on an epic adventure to find the legendary treasure.</p>
+                <button class="btn" onclick="alert('Welcome to the Grand Line! 🌊')">Explore</button>
+            </div>
+        </div>
+
+        <div class="anime-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/9/94/Naruto_Uzumaki.png" alt="Naruto">
+            <div class="content">
+                <h2>Naruto</h2>
+                <p>Join Naruto Uzumaki as he trains to become the strongest ninja and Hokage of his village.</p>
+                <button class="btn" onclick="alert('Believe it! 🍥')">Explore</button>
+            </div>
+        </div>
+
+        <div class="anime-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/4/4c/Bleach_Bleach.png" alt="Bleach">
+            <div class="content">
+                <h2>Bleach</h2>
+                <p>Follow Ichigo Kurosaki, a Soul Reaper, battling evil spirits known as Hollows.</p>
+                <button class="btn" onclick="alert('Prepare your Zanpakuto! ⚔️')">Explore</button>
+            </div>
+        </div>
+
+        <div class="anime-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/1/17/Dragon_Ball_Z.png" alt="Dragon Ball Z">
+            <div class="content">
+                <h2>Dragon Ball Z</h2>
+                <p>Goku and his friends defend Earth from powerful foes while training to become stronger.</p>
+                <button class="btn" onclick="alert('Kamehameha! 🌌')">Explore</button>
+            </div>
+        </div>
+
+        <div class="anime-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/5/5a/Attack_on_Titan_S1_Key_Visual.jpg" alt="Attack on Titan">
+            <div class="content">
+                <h2>Attack on Titan</h2>
+                <p>Humanity fights for survival against gigantic Titans in a post-apocalyptic world.</p>
+                <button class="btn" onclick="alert('Fight for humanity! 🛡️')">Explore</button>
+            </div>
+        </div>
+
+        <div class="anime-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/7/7a/My_Hero_Academia_Logo.png" alt="My Hero Academia">
+            <div class="content">
+                <h2>My Hero Academia</h2>
+                <p>Follow Izuku Midoriya as he trains to become a professional hero in a world full of superpowers.</p>
+                <button class="btn" onclick="alert('Plus Ultra! 💥')">Explore</button>
+            </div>
+        </div>
+
+        <!-- Add more anime cards similarly -->
+    </div>
+</div>
+
+<footer>
+    &copy; 2025 Anime World | Made with ❤️ for anime fans
+</footer>
+
+<script>
+    // Random floating sparkles
+    for (let i = 0; i < 50; i++) {
+        let sparkle = document.createElement('div');
+        sparkle.classList.add('sparkle');
+        sparkle.style.top = Math.random() * window.innerHeight + 'px';
+        sparkle.style.left = Math.random() * window.innerWidth + 'px';
+        sparkle.style.width = sparkle.style.height = Math.random() * 5 + 2 + 'px';
+        sparkle.style.animationDelay = Math.random() * 3 + 's';
+        document.body.appendChild(sparkle);
+    }
+</script>
+
+</body>
+</html>
