@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Apply Changes in Cluster') {
             steps {
-                sh "kubectl apply -f eks-deployment.yaml"
+                sh "kubectl apply -f /var/lib/jenkins/workspace/eks-deployment/eks-deployment.yaml"
             }
         }
         stage('Cleaning up') {
