@@ -19,16 +19,12 @@ pipeline {
         }
         stage('Update New Kubectl Deployment') {
             steps {
-                sh """
-                    yq e '.spec.template.spec.containers[0].image = "public.ecr.aws/j1o8i8l1/pub-repo:v$BUILD_NUMBER"' -i eks-deployment.yaml
-                """
+                sh "yq e '.spec.template.spec.containers[0].image = "public.ecr.aws/j1o8i8l1/pub-repo:v$BUILD_NUMBER"' -i eks-deployment.yaml"
             }
         }
         stage('Apply Changes in Cluster') {
             steps {
-                sh """
-                    kubectl apply -f eks-deployment.yaml
-                """
+                sh "kubectl apply -f eks-deployment.yaml"
             }
         }
         stage('Cleaning up') {
