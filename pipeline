@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh '''
                     docker build -t pub-repo:v$BUILD_NUMBER .
-                    docker tag pub-repo:latest public.ecr.aws/j1o8i8l1/pub-repo:v$BUILD_NUMBER
+                    docker tag pub-repo:v$BUILD_NUMBER public.ecr.aws/j1o8i8l1/pub-repo:v$BUILD_NUMBER
                     docker push public.ecr.aws/j1o8i8l1/pub-repo:v$BUILD_NUMBER
                 '''
             }
